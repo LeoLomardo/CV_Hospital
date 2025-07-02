@@ -1,0 +1,31 @@
+✅ 1. Verificação se o paciente está dentro da cama
+    |->Avaliar geometrias da vida real para criar alertas   
+        |->Tipos de Alertas
+            |->SENTADO
+            |->1 PERNA PRA FORA DA CAMA
+            |->2 PERNAS PRA FORA DA CAMA    
+            |->DE PE
+
+✅ 2. Testar identificacao dinamica da cama com cameras reais do hospital
+    |->Com imagens reais do hospital, realizar testes dinamicos
+
+
+✅ 3. Sistema de logs ou gravação
+    |->Verificar necessidades de ter logs do sistema de deteccao
+    |->Pensar na melhor forma de gerar um log dos alertas e dos movimentos.
+    |->Salvar eventos importantes:
+    |->Pensar qual melhor forma de salvar os logs
+        |->CSV
+        |->TXT
+        |->DAT
+
+
+✅ 4. Multialerta
+Detectar:
+
+Se movimento repentino for detectado
+
+Se o paciente ficar mais de X segundos em posição de SAINDO sem deitar de novo
+
+
+7-Precisa ser multiprocessing para pegar varias cameras simultaneamente. 

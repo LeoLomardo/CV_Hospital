@@ -7,5 +7,3 @@ This project uses **Computer Vision** to monitor ICU patients in real time, dete
 - Python **3.11** (strictly required)
 - `pip`
 - Windows (tested) or other platforms with equivalent configuration
-
-## Step-by-Step Setup

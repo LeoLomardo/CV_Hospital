@@ -1,2 +1,11 @@
 # CV_Hospital
-Python project using Computer Vision to identify ICU patients' positions and generate alerts to prevent falls.
+
+This project uses **Computer Vision** to monitor ICU patients in real time, detecting their body position (e.g., lying, sitting, leaving the bed) and generating alerts to help prevent falls and accidents.
+
+## Requirements
+
+- Python **3.11** (strictly required)
+- `pip`
+- Windows (tested) or other platforms with equivalent configuration
+
+## Step-by-Step Setup

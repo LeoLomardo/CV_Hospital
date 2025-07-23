@@ -1,22 +1,25 @@
+from ultralytics import YOLO
 import cv2
-import numpy as np
 
+
+model_path = "/home/leo/Documentos/LES/CV_Hospital/runs/detect/train4/weights/best.pt"
+modelo_cama = YOLO(model_path)
+
+
+#Funcoes relacionadas a detectar cama estao funcionando corretamente, basta apenas aumentar o dataset para melhorar a acuracia
 def detectar_cama(frame):
-    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    blur = cv2.GaussianBlur(gray, (7, 7), 0)
-    edges = cv2.Canny(blur, 30, 100)
+    #results = modelo_cama(frame, verbose=False)[0]
+    results = modelo_cama.predict(source= frame, verbose = False)[0]
+    if not results.boxes:
+        print("Nenhuma cama detectada neste frame.")
+        return None
 
-    contours, _ = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    for box in results.boxes:
+        classe = int(box.cls[0])
+        if classe == 0:  # 'Bed', talvez no futuro treinar um modelo detectando 'bed_arm', 'mattress', etc... mas por enquanto ele identifica tudo como 'Bed'
+            x1, y1, x2, y2 = map(int, box.xyxy[0])
+            print(f"Cama detectada: ({x1}, {y1}, {x2}, {y2})")
+            return (x1, y1, x2, y2)
 
-    cama_contorno = None
-    area_max = 0
-    for cnt in contours:
-        x, y, w, h = cv2.boundingRect(cnt)
-        area = w * h
-        aspect_ratio = w / h
-
-        if area > area_max and 1.5 < aspect_ratio < 5:  # formato retangular horizontal
-            area_max = area
-            cama_contorno = (x, y, x + w, y + h)
-
-    return cama_contorno
+    print("Cama nao identificada.")
+    return None

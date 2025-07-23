@@ -10,7 +10,7 @@
     |->Com imagens reais do hospital, realizar testes dinamicos
 
 
-✅ 3. Sistema de logs ou gravação
+✅ 3. Sistema de logs ou gravacao
     |->Verificar necessidades de ter logs do sistema de deteccao
     |->Pensar na melhor forma de gerar um log dos alertas e dos movimentos.
     |->Salvar eventos importantes:
@@ -29,3 +29,8 @@ Se o paciente ficar mais de X segundos em posição de SAINDO sem deitar de novo
 
 
 7-Precisa ser multiprocessing para pegar varias cameras simultaneamente. 
+
+8-Utilizar capturas de frames a cada periodo de tempo X e gerar alerta sobre a imagem, para diminuir gasto computacional
+
+
+9-SITE DETECCAO https://www.makesense.ai/

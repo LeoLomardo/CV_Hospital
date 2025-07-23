@@ -1,0 +1,5 @@
+train: /home/leo/Documentos/LES/CV_Hospital/CV_Hospital/dataset/images/train
+val: /home/leo/Documentos/LES/CV_Hospital/CV_Hospital/dataset/images/val
+
+nc: 1
+names: ['bed']

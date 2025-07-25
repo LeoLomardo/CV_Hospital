@@ -1,1 +1,9 @@
-yolo task=detect mode=train model=yolov8n.pt data=bed.yaml epochs=50 imgsz=640 batch=16 device=0
+1- Primeira vez que rodei por completo, resultado foi bem mais ou menos, conseguia identificar a cama apenas em 3 dos 6 vídeos e ficava com muito ruido
+    yolo task=detect mode=train model=yolov8n.pt data=bed.yaml epochs=50 imgsz=640 batch=16 device=0
+
+
+2-batch =-1 ele define o tamanho max do batch sem estourar memoria da  GPU
+    coloquei -1 e ele esta utilizando menos memoria do q quando coloquei batch = 16. Com batch=16 ele utilizava 2.7/3.0 em media, com batch=-1 ele utiliza 1.5/3.0 em media
+
+    yolo task=detect mode=train model=yolov8n.pt data=bed.yaml epochs=200 imgsz=640 batch=-1 device=0
+

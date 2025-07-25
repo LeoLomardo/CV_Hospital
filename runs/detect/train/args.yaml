@@ -1,16 +1,16 @@
 task: detect
 mode: train
 model: yolov8n.pt
-data: data.yaml
-epochs: 50
+data: bed.yaml
+epochs: 200
 time: null
 patience: 100
-batch: 16
+batch: -1
 imgsz: 640
 save: true
 save_period: -1
 cache: false
-device: cpu
+device: '0'
 workers: 8
 project: null
 name: train
@@ -102,4 +102,4 @@ auto_augment: randaugment
 erasing: 0.4
 cfg: null
 tracker: botsort.yaml
-save_dir: C:\Users\Leo\Documents\Visao Computacional\CV_Hospital\runs\detect\train
+save_dir: /home/leo/Documentos/LES/CV_Hospital/runs/detect/train

@@ -20,7 +20,7 @@
         |->DAT
 
 
-✅ 4. Multialerta
+4. Multialerta
 Detectar:
 
 Se movimento repentino for detectado

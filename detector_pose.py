@@ -6,9 +6,9 @@ mp_drawing = mp.solutions.drawing_utils
 
 pose = mp_pose.Pose(
     static_image_mode=False,         
-    model_complexity=1,             # define precisao 0,1,2, qnt maior mais preciso
+    model_complexity=2,             # define precisao 0,1,2, qnt maior mais preciso
     smooth_landmarks=True,           
-    enable_segmentation=True,       # Desativado por padrão
+    enable_segmentation=False,       # Desativado por padrão
     min_detection_confidence=0.75,  # Rejeita detecções fracas
     min_tracking_confidence=0.75    # Rejeita rastreamentos fracos
 )
@@ -22,7 +22,7 @@ def detectar_pose(frame):
     keypoints = {}
     if result.pose_landmarks:
         for idx, lm in enumerate(result.pose_landmarks.landmark):
-            if lm.visibility > 0.75:  # ajustável após testes
+            if lm.visibility > 0.5:  # ajustável após testes
                 keypoints[idx] = (lm.x, lm.y)
         
         mp_drawing.draw_landmarks(

@@ -13,14 +13,14 @@ import os
 
 #Melhores resultados
 #video_path = "/home/leo/Documentos/LES/Videos_VisComp/PA43-4320_convertido.mp4"
-video_path = "/home/leo/Documentos/LES/Videos_VisComp/PA44-4411_convertido.mp4"
+#video_path = "/home/leo/Documentos/LES/Videos_VisComp/PA44-4411_convertido.mp4"
 #video_path = "/home/leo/Documentos/LES/Videos_VisComp/PA_44_convertido.mp4"
 #video_path = "/home/leo/Documentos/LES/Videos_VisComp/4210.1_convertido.mp4"
 #video_path = "/home/leo/Documentos/LES/Videos_VisComp/4210.2_convertido.mp4"
 
 
 #Outros videos
-#video_path = "/home/leo/Documentos/LES/Videos_VisComp/4321_convertido.mp4"
+video_path = "/home/leo/Documentos/LES/Videos_VisComp/4321_convertido.mp4"
 
 video = cv2.VideoCapture(video_path)
 
@@ -61,7 +61,7 @@ while True:
     keypoints = detectar_pose(frame)
     # ATENCAO: ordem correta width, height **
     status = verificar_alerta_pose(keypoints, bed_coords, frame_width, frame_height)
-    if status in ("1 PERNA FORA", "2 PERNAS FORA", "FORA DA CAMA", "SAINDO"):
+    if status in ("PARTES FORA", "FORA DA CAMA"):
         gerar_alerta(status)
 
 

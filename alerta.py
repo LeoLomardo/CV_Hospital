@@ -17,7 +17,7 @@ def verificar_alerta_pose(keypoints, bed_coords, frame_width, frame_height):
     x1, y1, x2, y2 = bed_coords
 
     def fora_da_cama(px, py):
-        return not (x1 <= px <= x2 and y1 <= py <= y2) # se coordenada nao esta dentro dos limites de x E y ele ta fora da cama
+        return not (x1 <= px <= x2 and y1 <= py <= y2) # verificar futuramente de reduzir com hardcode tamanho da cama nessa etapa de verificacao agrega para o projeto
 
     total_fora = 0
     total_dentro = 0

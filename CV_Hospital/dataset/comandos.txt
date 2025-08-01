@@ -7,3 +7,7 @@
 
     yolo task=detect mode=train model=yolov8n.pt data=bed.yaml epochs=200 imgsz=640 batch=-1 device=0
 
+
+3- batch =  16, filtragem meio torta dos labels e tudo mais
+
+    yolo task=detect mode=train model=yolov8n.pt data=bed.yaml epochs=200 imgsz=640 batch=16 device=0

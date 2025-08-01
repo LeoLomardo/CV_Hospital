@@ -11,15 +11,21 @@ import os
 
 # Modo de captura da camera default do computador
 
-#Melhores resultados
+    #PCD
 video_path = "/home/leo/Documentos/LES/Videos_VisComp/PA43-4320_convertido.mp4"
+
+    #Acordado tomando cafe
 #video_path = "/home/leo/Documentos/LES/Videos_VisComp/PA44-4411_convertido.mp4"
+
+    #Dormindo sentado
 #video_path = "/home/leo/Documentos/LES/Videos_VisComp/PA_44_convertido.mp4"
+
+    #Entubado
 #video_path = "/home/leo/Documentos/LES/Videos_VisComp/4210.1_convertido.mp4"
 #video_path = "/home/leo/Documentos/LES/Videos_VisComp/4210.2_convertido.mp4"
 
 
-#Outros videos
+    #Entubado com enfermeira auxiliando, esta marcando que esta fora da cama mesmo estando dentro da cama 
 #video_path = "/home/leo/Documentos/LES/Videos_VisComp/4321_convertido.mp4"
 
 video = cv2.VideoCapture(video_path)
@@ -34,7 +40,7 @@ if not video.isOpened():
 
 bed_coords = None
 frame_count = 0
-DETECT_INTERVAL = 60  # taxaCamera x qnts segundos de intervalo 
+DETECT_INTERVAL = 10  # taxaCamera x qnts segundos de intervalo 
 
 while True:
     ret, frame = video.read()

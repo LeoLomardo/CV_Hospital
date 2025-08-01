@@ -1,0 +1,10 @@
+#-ARTIGOS:
+    https://arxiv.org/html/2403.06322v1#S3
+
+    https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9871978
+
+    
+
+#-IDEIAS:
+    -Verificar se treinamento de deteccao da cama com essas tecnologias nao é melhor:SAM - Meta Mask R-CNN YOLACT, 
+        |->Isso pq elas marcam o objeto como um poligono, nao apenas um retangulo, logo ela fica com menos impreciso, porem deve ficar um pouco mais ruidoso 

@@ -2,7 +2,7 @@ from ultralytics import YOLO
 import cv2
 
 
-model_path = "/home/leo/Documentos/LES/CV_Hospital/runs/detect/train/weights/best.pt"
+model_path = "/home/leo/Documentos/LES/CV_Hospital/runs/detect/train2/weights/best.pt"
 modelo_cama = YOLO(model_path)
 
 
